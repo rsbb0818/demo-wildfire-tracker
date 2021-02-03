@@ -17,7 +17,7 @@ function App() {
 			const { events } = await res.json();
 			// Jsonfy data from res to events
 
-			setEventData(events);
+			setEventData(events); // eslint-disable-line react-hooks/exhaustive-deps
 			// EventData = {events}
 			setLoading(false);
 			// Stop loading = stop fetching
@@ -25,7 +25,7 @@ function App() {
 
 		fetchEvents();
 
-		console.log(eventData);
+		// console.log(eventData);
 	}, []);
 
 	return (
